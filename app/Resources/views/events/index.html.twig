@@ -1,4 +1,49 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-       INDEX
+	<div class="row">
+		<div class="col-md-12">
+			<h2 class="page-header"> Events </h2>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Event Name</th>
+						<th>Event Date</th>
+						<th>Event Image</th>
+						<th>Event Capacity</th>
+						<th>Event Email</th>
+						<th>Event Phone Number</th>
+						<th>Event Address</th>
+						<th>Event ZIP-Code</th>
+						<th>Event City</th>
+						<th>Event Website</th>
+						<th>Event Type</th>
+					</tr>
+				</thead>
+				{% for events in events %}
+					<tbody>
+						<tr>
+							<th scope="row">{{events.id}}</th>
+							<td>{{events.eventName}}</td>
+							<td>{{events.eventDate}}</td>
+							<td><img class="images" src="{{events.eventImage}}" alt=""></td>
+							<td>{{events.eventCapacity}}</td>
+							<td>{{events.eventEmail}}</td>
+							<td>{{events.eventPhone}}</td>
+							<td>{{events.eventAddress}}</td>
+							<td>{{events.eventZIP}}</td>
+							<td>{{events.eventCity}}</td>
+							<td>{{events.eventURL}}</td>
+							<td>{{events.eventType}}</td>
+							<td> <a href="/events/details/{{events.id}}" class="btn btn-success">View</a>
+
+								<a href="/events/edit/{{events.id}}" class="btn btn-default">Edit</a>
+								<a href="/events/delete/{{events.id}}" class="btn btn-danger">Delete</a>        
+							</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
 {% endblock %}

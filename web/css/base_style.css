@@ -1,0 +1,42 @@
+/* * {
+	border: 1px solid red;
+}
+
+img {
+	border: 1px solid red;
+} */
+
+html, body {
+	min-height: 100%;
+}
+
+
+
+
+#footer {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	position:  fixed;
+	bottom: 0;
+	height:  100px;
+	background-color: #222;
+	color: white;
+
+ }
+#footer-text p { 
+	text-align: center;
+
+}
+
+#footer-text {
+	margin: auto auto 5px auto;
+}
+
+#footer-img {
+	width: 8%;
+	margin: auto auto 4px auto;
+}
+.images {
+	width: 100%;
+}

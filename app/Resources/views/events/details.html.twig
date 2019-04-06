@@ -1,1 +1,18 @@
-DETAILS
+{% extends 'base.html.twig' %}
+{% block body %}
+       <a class="btn btn-default" href="/">Back to Events</a>
+       <hr>
+       <h2 class="page-header">{{events.eventName}}</h2>
+       <ul class="list-group">
+               <li class="list-group-item">Image: <img class="images" src="{{events.eventImage}}" alt="" height="100" width="100"></li>
+               <li class="list-group-item">Date: {{events.eventDate}}</li>
+               <li class="list-group-item">Capacity: {{events.eventCapacity}}</li>
+               <li class="list-group-item">Capacity: {{events.eventEmail}}</li>
+               <li class="list-group-item">Capacity: {{events.eventPhone}}</li>
+               <li class="list-group-item">Capacity: {{events.eventAddress}}</li>
+               <li class="list-group-item">Capacity: {{events.eventZIP}}</li>
+               <li class="list-group-item">Capacity: {{events.eventCity}}</li>
+               <li class="list-group-item">Capacity: {{events.eventURL}}</li>
+               <li class="list-group-item">Capacity: {{events.eventType}}</li>
+       </ul>
+{% endblock %}
